@@ -1,4 +1,5 @@
-// Import specific functions from the anime.js library
+// Text animation adapted from Anime.js documentation:
+// https://animejs.com/documentation/animation
 import { animate, stagger, splitText, createAnimatable, utils} from 'https://esm.sh/animejs';
 
 // Split the text inside <h2> element into individual characters
@@ -21,7 +22,8 @@ animate(chars, {
   loop: true
 });
 
-// for following object
+// Mouse-follow animation adapted from Anime.js documentation:
+// https://animejs.com/documentation/animatable
 const $demo = document.querySelector('.content'); //boudaring for moving object
 let bounds = $demo.getBoundingClientRect(); // the bound 
 const refreshBounds = () => bounds = $demo.getBoundingClientRect(); // refresh bounds function
