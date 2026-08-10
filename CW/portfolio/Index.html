@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giap - Portfolio</title>
+
+    <!-- Google Fonts: importing the "Abel" font family -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+
+    <!-- Bootstrap 5.3.8 CSS framework via CDN, for grid system and pre-built components -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Custom stylesheet for site-specific styling -->
+    <link rel="stylesheet" type="text/css" href="Style.css">
+</head>
+<body>
+
+<!-- Anime.js library via CDN, used for JS-driven animations -->
+<script src="https://cdn.jsdelivr.net/npm/animejs/dist/bundles/anime.umd.min.js"></script>
+<h2>HELLO RANDOM PERSON</h2>
+<!-- Sets script type to module and links index.js for animations -->
+<script type="module" src="index.js"> </script>
+
+
+<div class="content">
+    <!-- Main container, bordered box with rounded corners and secondary (grey) border color -->
+    <div class=" container border border-secondary rounded form-fieldset content"> 
+    <div class="square"></div>
+
+        <!-- Bootstrap flex row container -->
+        <div class="row">
+
+            <!-- Column taking up 12 columns (full width) -->
+            <div class="col-12 grid-item1 title">SiuGiap</div>
+                
+            <!-- Column taking up 6 columns on small screens and up -->
+            <div class="col-12 col-sm-6 subtitle">DevG</div>
+
+            <!-- Navigation links pointing to other pages -->
+            <nav class="grid-item2">
+                <a href="Index.html" class="nav-link"> * </a>
+                <a href="Projects.html" class="nav-link">Projects</a>
+                <a href="Info.html" class="nav-link">Info</a>
+                <a href="Contact.html" class="nav-link">Contact</a>
+                <a href="FAQ.html" class="nav-link">FAQ</a>    
+            </nav>
+
+            <!-- Column taking up 6 columns on small screens and up -->
+            <div class="col-12 col-sm-6 grid-item4 border text-break">
+                Born in Vietnam in 2005, I created this website for my academic studies and coursework. I am looking forward to working as a Game Developer or Game Designer in the future.            
+            </div>
+        </div>
+    </div>
+    <!-- Small button linking to Keita Yamada's site -->
+    <nav class="grid-item5"> <a href="https://p5aholic.me/info/" type="button" class="btn btn-outline-secondary btn-sm mono-ui grid-item5">The Deep </a></nav>
+</div>
+</body>
+</html>

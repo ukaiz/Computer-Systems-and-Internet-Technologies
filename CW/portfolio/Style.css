@@ -1,0 +1,114 @@
+html{
+	scroll-behavior: smooth;
+	scrollbar-width: none;
+}
+@view-transition{
+	navigation: auto;
+}
+body{
+	font-family: monospace;
+	background-color: #0a0a0a;
+	color: #cccccc;
+	margin: 30px;
+	width: 100%;
+	height: 100%;
+	/* RENDERING OPTIMIZATION */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+/* Create margin around the flex row grid*/
+.content{
+	max-width: 1100px;
+	margin: auto;
+}
+
+/* Container for the bordered fieldset box */
+.form-fieldset { 
+  position: relative; /* Allows absolutely positioned children to anchor to this box */
+  min-height: calc(100vh - 120px); /* Ensures box fills most of the viewport height, leaving room for spacing/footer */
+}
+
+/* Large Title */
+.title {
+	font-family: "Abel";
+	text-decoration: none;
+	font-size: 3rem;
+	font-weight: 400;
+	color: #ffffff;
+	letter-spacing: 0.03em; 
+}
+/* Subtitle (e.g., "Designer & Developer") */
+.subtitle {
+	font-size: 1rem;
+	font-weight: 400;
+	color: #888888; 
+	margin-bottom: 40px;
+}
+
+.grid-item1{grid-area: Header;}
+.grid-item2{grid-area: Nav;}
+.grid-item3{grid-area: Main;}
+
+/* Aside content box, fixed to bottom-right corner of the page */
+.grid-item4 {
+  grid-area: Aside;
+  position: absolute;
+  bottom: clamp(16px, 4vw, 60px); 		/* Responsive spacing from bottom */
+  right: clamp(16px, 4vw, 60px);		/* Responsive spacing from right edge */
+  max-width: clamp(200px, 30vw, 300px);  
+  max-height: 65vh;                       
+  overflow-y: auto;                    /* scrolls internall1y instead of growing/clipping */
+  text-align: right;
+  z-index: 10; 							/* Keeps this box above other stacked elements */
+}
+/* Hide the scrollbar visually but keep it functional*/
+.grid-item4::-webkit-scrollbar {
+  scrollbar-width: none;
+}
+.grid-item5{
+	grid-area: Footer;
+}
+
+/* Navigation Links */
+.nav-link {
+	width: fit-content;
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 1.1rem;
+	margin-bottom: 0.5em;
+	opacity: 1;
+    transition: opacity 0.5s ease;
+
+}
+.nav-link:hover {
+	opacity: 0.5; /* Fades link slightly on hover */
+}
+
+/* Small uppercase UI button/link style (e.g. "The Deep" button) */
+.mono-ui {
+	text-decoration: none;
+	font-size: 0.75em;
+	text-transform: uppercase;
+	color: #707070;
+}
+
+/* FAQ section text styling */
+.FAQ{
+	color: #ffffff;
+	padding-bottom: 1rem;
+}
+.square {
+	position: absolute; /* set the positon to nearst positioned ancestor */
+	width: 24px;
+	height: 24px;
+	background-color: #0a0a0a;
+	background-image: url(Projects/AnnoyingDog.gif);
+	background-size: contain;	 /* fit the whole img inside the box, no cropping */
+	background-repeat: no-repeat; /* no repeat the img, show it once */
+	/* change the position of img down to 50% of top and left of it ancestor */
+	top: 50%;
+	left: 50%;
+}
+
